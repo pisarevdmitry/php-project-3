@@ -6,8 +6,7 @@
                     <!-- post-mini-->
                     <?php
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $param =['posts_per_page'=>4,
-                            'post_type' => ['post', 'akcia'],
+                    $param =['post_type' => ['post', 'akcia'],
                             'paged' => $paged
                            ];
                     query_posts($param);

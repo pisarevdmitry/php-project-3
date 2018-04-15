@@ -1,7 +1,7 @@
 <?php
 require "../wp-load.php";
 get_header();
-query_posts(['post_type' => 'post']);?>
+;?>
 
 <div class="content-wrapper">
 
@@ -13,7 +13,8 @@ query_posts(['post_type' => 'post']);?>
             $paged = (get_query_var('paged') ) ? get_query_var('paged') : 1;
             $param =[
             'paged' => $paged,
-            's'=> get_search_query()
+            's'=> get_search_query(),
+            'post_type' => ['post']
             ];
             query_posts($param);?>
             <?php
