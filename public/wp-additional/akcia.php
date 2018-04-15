@@ -1,7 +1,7 @@
 <?php
 require "../wp-load.php";
 get_header();
-query_posts(['post_type' => 'post']);?>
+;?>
 
     <div class="content-wrapper">
 
@@ -10,11 +10,9 @@ query_posts(['post_type' => 'post']);?>
             <div class="posts-list">
                 <!-- post-mini-->
                 <?php
-                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
                 $param =[
+                    'nopaging' => true,
                     'post_type' => ['akcia'],
-                    'paged' => $paged,
-
                 ];
                 query_posts($param);?>
                 <?php

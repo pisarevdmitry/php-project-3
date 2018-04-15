@@ -10,10 +10,8 @@ get_header();
         <div class="posts-list">
             <!-- post-mini-->
             <?php
-            $paged = (get_query_var('paged') ) ? get_query_var('paged') : 1;
             $param =[
-            'paged' => $paged,
-            's'=> get_search_query(),
+             'nopaging' => true,
             'post_type' => ['post']
             ];
             query_posts($param);?>
